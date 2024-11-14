@@ -1,10 +1,6 @@
 from abc import ABC, abstractmethod
 from math import pi
 
-# Square TopRight 1 1 Side 1
-# Rectangle TopRight 2 2 BottomLeft 1 1
-# Circle Center 1 1 Radius 2
-
 class Shape(ABC):
 
     @abstractmethod
