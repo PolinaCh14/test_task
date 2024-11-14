@@ -30,17 +30,17 @@ def shapes_program():
         
     
     if shape == SHAPES[0] and len(numbers) == 3:
-        square = Square([numbers[0], numbers[1]], numbers[2])
+        square = Square((numbers[0], numbers[1]), numbers[2])
         if square.side < 0:
             return "The side of a squere cannot be negative"
         perimeter = square.perimeter()
         area = square.area()
     elif shape == SHAPES[1] and len(numbers) == 4:
-        rectangle = Rectangle([numbers[0], numbers[1]], [numbers[2], numbers[3]])
+        rectangle = Rectangle((numbers[0], numbers[1]), (numbers[2], numbers[3]))
         perimeter = rectangle.perimeter()
         area = rectangle.area()
     elif shape == SHAPES[2] and len(numbers) == 3:
-        circle = Circle([numbers[0], numbers[1]], numbers[2])
+        circle = Circle((numbers[0], numbers[1]), numbers[2])
         if circle.radius < 0:
             return "The radius of a circle cannot be negative"
         perimeter = circle.perimeter()

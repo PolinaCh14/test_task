@@ -23,9 +23,7 @@ class Square(Shape):
     
     def area(self):
         return  self.side**2
-    
-    def __str__(self):
-        return f"Triangle: Top right {self.top_right}, side {self.side}"
+
     
 
 class Rectangle(Shape):
