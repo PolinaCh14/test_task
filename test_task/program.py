@@ -29,14 +29,12 @@ def shapes_program():
         return "We don't have this shape"
         
     try:
-        if user_shape == SHAPES[0] and len(numbers) == 3:
+        if user_shape == SHAPES[0]:
             shape = Square(numbers)    
-        elif user_shape == SHAPES[1] and len(numbers) == 4:
+        elif user_shape == SHAPES[1]:
             shape = Rectangle(numbers)
-        elif user_shape == SHAPES[2] and len(numbers) == 3:
+        elif user_shape == SHAPES[2]:
             shape = Circle(numbers)
-        else:
-            return "Invalid number of parameters for the shape."
     except Exception as e:
         return str(e)
 

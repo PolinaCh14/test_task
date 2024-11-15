@@ -15,6 +15,8 @@ class Shape(ABC):
 class Rectangle(Shape):
 
     def __init__(self, numbers):
+        if len(numbers) < 4:
+            raise Exception("Invalid number of parameters for the shape.")
         self.top_right = (numbers[0], numbers[1])
         self.bottom_left = (numbers[2], numbers[3])
 
@@ -34,6 +36,8 @@ class Rectangle(Shape):
 class Square(Rectangle):
 
     def __init__(self, numbers):
+        if len(numbers) < 3:
+            raise Exception("Invalid number of parameters for the shape.")
         self.side = numbers[2]
         super().__init__([numbers[0], numbers[1],numbers[0]-self.side , numbers[1]-self.side])
 
@@ -44,6 +48,8 @@ class Square(Rectangle):
 class Circle(Shape):
 
     def __init__(self, numbers):
+        if len(numbers) < 3:
+            raise Exception("Invalid number of parameters for the shape.")
         self.center = (numbers[0], numbers[1])
         self.radius = numbers[2]
         if self.radius < 0:
