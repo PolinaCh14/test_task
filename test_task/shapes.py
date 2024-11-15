@@ -12,20 +12,6 @@ class Shape(ABC):
         pass
 
 
-class Square(Shape):
-
-    def __init__(self, top_right, side):
-        self.top_right = top_right
-        self.side = side
-
-    def perimeter(self):
-        return 4 * self.side
-    
-    def area(self):
-        return  self.side**2
-
-    
-
 class Rectangle(Shape):
 
     def __init__(self, top_right,  bottom_left):
@@ -44,6 +30,18 @@ class Rectangle(Shape):
     def area(self):
         width, height = self.width_height()
         return width * height
+
+class Square(Rectangle):
+
+    def __init__(self, top_right, side):
+        super().__init__(top_right=top_right,
+                         bottom_left =(top_right[0]-side , top_right[1]-side))
+        self.side = side
+        
+
+    
+
+
 
 class Circle(Shape):
 

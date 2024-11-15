@@ -1,4 +1,4 @@
-from test_task.shapes import (
+from shapes import (
     Square,
     Rectangle,
     Circle
