@@ -30,9 +30,7 @@ def shapes_program():
         
     try:
         if user_shape == SHAPES[0] and len(numbers) == 3:
-            shape = Square(numbers)
-            if shape.side < 0:
-                return "The side of a squere cannot be negative"    
+            shape = Square(numbers)    
         elif user_shape == SHAPES[1] and len(numbers) == 4:
             shape = Rectangle(numbers)
         elif user_shape == SHAPES[2] and len(numbers) == 3:

@@ -36,6 +36,9 @@ class Square(Rectangle):
     def __init__(self, numbers):
         self.side = numbers[2]
         super().__init__([numbers[0], numbers[1],numbers[0]-self.side , numbers[1]-self.side])
+
+        if self.side < 0:
+                raise Exception("The side of a squere cannot be negative")
         
         
 class Circle(Shape):
