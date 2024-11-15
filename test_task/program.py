@@ -6,7 +6,9 @@ from shapes import (
 )
 
 
-SHAPES = ["Square", "Rectangle", "Circle"]
+SHAPES ={"Square": Square,
+         "Rectangle": Rectangle, 
+         "Circle": Circle}
 
 
 def shapes_program():
@@ -29,12 +31,8 @@ def shapes_program():
         return "We don't have this shape"
         
     try:
-        if user_shape == SHAPES[0]:
-            shape = Square(numbers)    
-        elif user_shape == SHAPES[1]:
-            shape = Rectangle(numbers)
-        elif user_shape == SHAPES[2]:
-            shape = Circle(numbers)
+        shape = SHAPES[user_shape](numbers)
+        
     except Exception as e:
         return str(e)
 
