@@ -34,7 +34,7 @@ def shapes_program():
         if shape.side < 0:
             return "The side of a squere cannot be negative"    
     elif user_shape == SHAPES[1] and len(numbers) == 4:
-        shape = Rectangle((numbers[0], numbers[1]), (numbers[2], numbers[3]))
+        shape = Rectangle(numbers)
     elif user_shape == SHAPES[2] and len(numbers) == 3:
         shape = Circle(numbers)
         if shape.radius < 0:

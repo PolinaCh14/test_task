@@ -16,7 +16,7 @@ class TestShapes(unittest.TestCase):
         cls.square1_ = Square([1,1,1])
         cls.square2_ = Square([2,2,4])
 
-        cls.rectangle1_ = Rectangle((2,2), (1,1))
+        cls.rectangle1_ = Rectangle([2,2,1,1])
 
         cls.circle1_ = Circle([1,1,2])
     

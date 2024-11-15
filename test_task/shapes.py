@@ -14,9 +14,9 @@ class Shape(ABC):
 
 class Rectangle(Shape):
 
-    def __init__(self, top_right,  bottom_left):
-        self.top_right = top_right
-        self.bottom_left = bottom_left
+    def __init__(self, numbers):
+        self.top_right = (numbers[0], numbers[1])
+        self.bottom_left = (numbers[2], numbers[3])
 
     def width_height(self):
         width = abs(self.top_right[0] - self.bottom_left[0])
@@ -35,8 +35,7 @@ class Square(Rectangle):
 
     def __init__(self, numbers):
         self.side = numbers[2]
-        super().__init__(top_right=(numbers[0], numbers[1]),
-                         bottom_left =(numbers[0]-self.side , numbers[1]-self.side))
+        super().__init__([numbers[0], numbers[1],numbers[0]-self.side , numbers[1]-self.side])
         
         
 
