@@ -32,13 +32,11 @@ def shapes_program():
     if user_shape == SHAPES[0] and len(numbers) == 3:
         shape = Square((numbers[0], numbers[1]), numbers[2])
         if shape.side < 0:
-            return "The side of a squere cannot be negative"
-        
+            return "The side of a squere cannot be negative"    
     elif user_shape == SHAPES[1] and len(numbers) == 4:
         shape = Rectangle((numbers[0], numbers[1]), (numbers[2], numbers[3]))
-
     elif user_shape == SHAPES[2] and len(numbers) == 3:
-        shape = Circle((numbers[0], numbers[1]), numbers[2])
+        shape = Circle(numbers)
         if shape.radius < 0:
             return "The radius of a circle cannot be negative"
 

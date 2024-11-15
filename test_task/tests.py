@@ -18,7 +18,7 @@ class TestShapes(unittest.TestCase):
 
         cls.rectangle1_ = Rectangle((2,2), (1,1))
 
-        cls.circle1_ = Circle((1,1), 2)
+        cls.circle1_ = Circle([1,1,2])
     
     def test_correct_square_perimeter(self):
 

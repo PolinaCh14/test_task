@@ -45,9 +45,9 @@ class Square(Rectangle):
 
 class Circle(Shape):
 
-    def __init__(self, center, radius):
-        self.center = center
-        self.radius = radius
+    def __init__(self, numbers):
+        self.center = (numbers[0], numbers[1])
+        self.radius = numbers[2]
     
     def perimeter(self):
         p = 2 * pi * self.radius
