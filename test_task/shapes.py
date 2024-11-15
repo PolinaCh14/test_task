@@ -33,14 +33,12 @@ class Rectangle(Shape):
 
 class Square(Rectangle):
 
-    def __init__(self, top_right, side):
-        super().__init__(top_right=top_right,
-                         bottom_left =(top_right[0]-side , top_right[1]-side))
-        self.side = side
+    def __init__(self, numbers):
+        self.side = numbers[2]
+        super().__init__(top_right=(numbers[0], numbers[1]),
+                         bottom_left =(numbers[0]-self.side , numbers[1]-self.side))
         
-
-    
-
+        
 
 
 class Circle(Shape):

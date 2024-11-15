@@ -13,8 +13,8 @@ class TestShapes(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        cls.square1_ = Square((1,1), 1)
-        cls.square2_ = Square((2,2), 4)
+        cls.square1_ = Square([1,1,1])
+        cls.square2_ = Square([2,2,4])
 
         cls.rectangle1_ = Rectangle((2,2), (1,1))
 
