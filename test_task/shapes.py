@@ -38,13 +38,13 @@ class Square(Rectangle):
         super().__init__([numbers[0], numbers[1],numbers[0]-self.side , numbers[1]-self.side])
         
         
-
-
 class Circle(Shape):
 
     def __init__(self, numbers):
         self.center = (numbers[0], numbers[1])
         self.radius = numbers[2]
+        if self.radius < 0:
+            raise Exception("The radius of a circle cannot be negative")
     
     def perimeter(self):
         p = 2 * pi * self.radius

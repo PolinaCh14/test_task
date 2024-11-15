@@ -28,20 +28,21 @@ def shapes_program():
     else:
         return "We don't have this shape"
         
-    
-    if user_shape == SHAPES[0] and len(numbers) == 3:
-        shape = Square(numbers)
-        if shape.side < 0:
-            return "The side of a squere cannot be negative"    
-    elif user_shape == SHAPES[1] and len(numbers) == 4:
-        shape = Rectangle(numbers)
-    elif user_shape == SHAPES[2] and len(numbers) == 3:
-        shape = Circle(numbers)
-        if shape.radius < 0:
-            return "The radius of a circle cannot be negative"
+    try:
+        if user_shape == SHAPES[0] and len(numbers) == 3:
+            shape = Square(numbers)
+            if shape.side < 0:
+                return "The side of a squere cannot be negative"    
+        elif user_shape == SHAPES[1] and len(numbers) == 4:
+            shape = Rectangle(numbers)
+        elif user_shape == SHAPES[2] and len(numbers) == 3:
+            shape = Circle(numbers)
+        else:
+            return "Invalid number of parameters for the shape."
+    except Exception as e:
+        return str(e)
 
-    else:
-        return "Invalid number of parameters for the shape."
+    
     perimeter = shape.perimeter()
     area = shape.area()
     
